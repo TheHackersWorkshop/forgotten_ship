@@ -1,0 +1,81 @@
+{
+  "intro": "You wake up in an unfamiliar cargo bay. The ship is in disrepair, and something has gone terribly wrong. Your mission is to explore the ship, repair critical systems, and uncover what happened.",
+
+  "ship_logs": {
+    "log_001": {
+      "title": "Initial Discovery",
+      "content": "We've found the abandoned ship near Saturn.",
+      "unlocked": true
+    },
+    "log_002": {
+      "title": "Power Restored",
+      "content": "Power to main engine restored. Systems coming online.",
+      "unlocked": false
+    },
+    "log_003": {
+      "title": "Lifeform Anomaly",
+      "content": "Unregistered bio-signatures detected in lower decks. Quarantine failed.",
+      "unlocked": false
+    }
+  },
+
+  "ship_alarms": [
+    "A distant alarm blares, making your heart race.",
+    "You hear a low hum, like something is powering up.",
+    "Suddenly, the lights flicker. Is it a malfunction, or something worse?",
+    "A klaxon blares: 'WARNING: Hull breach detected in sector 7.'",
+    "You hear a mechanical clunk, followed by silence... then scraping."
+  ],
+
+  "rooms": {
+    "cargo_bay": {
+      "description": "A dark and dusty cargo bay. The air is stale, and you can hear faint creaks coming from the walls.",
+      "dialogue": [
+        "You look around the cargo bay. It seems deserted.",
+        "The bay is in disarray, but there's a faint sign of recent activity."
+      ]
+    },
+    "engine_room": {
+      "description": "The engine room is hot and filled with the hum of malfunctioning machinery.",
+      "dialogue": [
+        "You approach the control panel. It looks like the engine might be the source of the ship's problems.",
+        "The engine is malfunctioning. You need to fix it before it’s too late."
+      ]
+    },
+    "weapons_room": {
+      "description": "A secure weapons room. It’s locked, but you can hear the faint sound of equipment shifting behind the door.",
+      "dialogue": [
+        "You hear a faint noise behind the locked door. What could be on the other side?",
+        "The weapons room is heavily secured. You'll need a key to get in."
+      ]
+    },
+    "bridge": {
+      "description": "A wide, dimly-lit control deck with cracked displays and a lingering metallic scent.",
+      "dialogue": [
+        "The navigation system is offline. Manual override may be possible.",
+        "The captain’s chair sits empty, tilted slightly as if recently vacated."
+      ]
+    },
+    "server_room": {
+      "description": "The hum of servers is sporadic. Some lights flicker, others are completely dead.",
+      "dialogue": [
+        "Terminals blink with corrupted data logs.",
+        "You see failed login attempts on the mainframe console."
+      ]
+    },
+    "sleeping_quarters_1": {
+      "description": "Bunks are stripped bare, and personal belongings are scattered.",
+      "dialogue": [
+        "There’s a half-written letter on the floor. The ink is smeared.",
+        "Something was dragged out of here in a hurry."
+      ]
+    },
+    "med_bay": {
+      "description": "A flickering surgical light hangs above a stained examination table.",
+      "dialogue": [
+        "Medical logs show repeated failed attempts at emergency treatment.",
+        "There’s a broken med drone in the corner."
+      ]
+    }
+  }
+}

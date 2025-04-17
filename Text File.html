@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ship Map Grid with Room Outlines</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 30px repeat(26, 30px);
+      gap: 1px;
+    }
+    .cell {
+      position: relative;
+      width: 30px;
+      height: 30px;
+      border: 1px solid #ccc;
+      text-align: center;
+      line-height: 30px;
+      font-size: 12px;
+    }
+    .label {
+      background-color: #eee;
+      font-weight: bold;
+    }
+
+    /* Room Colors / Borders */
+    .bridge { background-color: #222; border: 2px solid #3f3; }
+    .server-room { background-color: #333; border: 2px solid #3ff; }
+    .weapons-room { background-color: #444; border: 2px solid #f39; }
+    .engine-room { background-color: #555; border: 2px solid #ff3; }
+    .airlock { background-color: #666; border: 2px solid #f93; }
+    .corridor { background-color: #777; border: 2px solid #ccc; }
+    .cargo-bay { background-color: #888; border: 2px solid #0ff; }
+    .sleeping-1 { background-color: #999; border: 2px solid #fc0; }
+    .sleeping-2 { background-color: #aaa; border: 2px solid #f0f; }
+    .sleeping-3 { background-color: #bbb; border: 2px solid #0f0; }
+    .sleeping-4 { background-color: #ccc; border: 2px solid #00f; }
+    .chow-hall { background-color: #ddd; border: 2px solid #b00; }
+    .med-bay { background-color: #eee; border: 2px solid #08f; }
+
+    /* Door Style */
+    .door-indicator {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      width: 6px;
+      height: 6px;
+      background-color: red;
+      border-radius: 50%;
+      z-index: 10;
+    }
+
+    /* Console Marker */
+    .console-indicator {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      width: 14px;
+      height: 14px;
+      background-color: #00f;
+      border: 2px solid #fff;
+      border-radius: 3px;
+      z-index: 15;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Ship Map Grid with Room Outlines</h2>
+<div class="grid" id="grid"></div>
+
+<script>
+  const roomStyles = {
+    "Bridge": "bridge",
+    "Server Room": "server-room",
+    "Weapons Room": "weapons-room",
+    "Engine Room": "engine-room",
+    "Airlock": "airlock",
+    "Corridor": "corridor",
+    "Cargo Bay (Start)": "cargo-bay",
+    "Sleeping Quarters 1": "sleeping-1",
+    "Sleeping Quarters 2": "sleeping-2",
+    "Sleeping Quarters 3": "sleeping-3",
+    "Sleeping Quarters 4": "sleeping-4",
+    "Chow Hall": "chow-hall",
+    "Med Bay": "med-bay"
+  };
+
+  const roomMap = {
+    "Bridge": ["I19","J19","K19","L19","I20","J20","K20","L20","I21","J21","K21","L21","I22","J22","K22","L22"],
+    "Server Room": ["M19","N19","O19","M20","N20","O20","M21","N21","O21"],
+    "Weapons Room": ["P19","Q19","P20","Q20"],
+    "Engine Room": ["C5","D5","E5","F5","G5","H5","C6","D6","E6","F6","G6","H6","C7","D7","E7","F7","G7","H7"],
+    "Airlock": ["I3","J3","I4","J4"],
+    "Corridor": ["I10","J10","K10","L10","I11","J11","K11","L11","I12","J12","K12","L12","I13","J13","K13","L13",
+      "I14","J14","K14","L14","I15","J15","K15","L15","I16","J16","K16","L16","M16","N16","O16","P16",
+      "Q16","R16","S16","T16","I17","J17","K17","L17","M17","N17","O17","P17","Q17","R17","S17","T17",
+      "I18","J18","K18","L18","M18","N18","O18","P18","Q18","R18","S18","T18","R19","S19","T19","R20",
+      "S20","T20","P21","Q21","R21","S21","T21","M22","N22","O22","P22","Q22","R22","S22","T22","I23",
+      "J23","K23","L23","M23","N23","O23","P23","Q23","R23","S23","T23","I24","J24","K24","L24","M24",
+      "N24","O24","P24","Q24","R24","S24","T24"],
+    "Cargo Bay (Start)": ["I5","J5","K5","L5","M5","N5","O5","P5","Q5","I6","J6","K6","L6","M6","N6","O6","P6","Q6",
+      "I7","J7","K7","L7","M7","N7","O7","P7","Q7","C8","D8","E8","F8","G8","H8","I8","J8","K8","L8",
+      "M8","N8","O8","P8","Q8","C9","D9","E9","F9","G9","H9","I9","J9","K9","L9","M9","N9","O9","P9","Q9"],
+    "Sleeping Quarters 1": ["C10","D10","E10","F10","G10","H10","C11","D11","E11","F11","G11","H11","C12","D12","E12","F12","G12","H12"],
+    "Sleeping Quarters 2": ["N10","M10","O10","P10","Q10","N11","M11","O11","P11","Q11","N12","M12","O12","P12","Q12"],
+    "Sleeping Quarters 3": ["C13","D13","E13","F13","G13","H13","C14","D14","E14","F14","G14","H14","C15","D15","E15","F15","G15","H15"],
+    "Sleeping Quarters 4": ["N13","M13","O13","P13","Q13","N14","M14","O14","P14","Q14","N15","M15","O15","P15","Q15"],
+    "Chow Hall": ["U16","V16","W16","X16","Y16","U17","V17","W17","X17","Y17","U18","V18","W18","X18","Y18"],
+    "Med Bay": ["R13","S13","T13","R14","S14","T14","R15","S15","T15"]
+  };
+
+  const doorCoords = [
+    "K22,K23","N21,N22","Q20,Q21","J4,J5","H6,I6","J9,J10",
+    "H11,I11","L11,M11","H14,I14","L14,M14","T17,U17","S15,S16"
+  ];
+
+  const coordToRoomClass = {};
+  for (const [room, coords] of Object.entries(roomMap)) {
+    const className = roomStyles[room];
+    coords.forEach(coord => {
+      coordToRoomClass[coord] = className;
+    });
+  }
+
+  const cols = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split('');
+  const rows = Array.from({ length: 25 }, (_, i) => i + 1);
+  const grid = document.getElementById("grid");
+
+  // Header row
+  grid.appendChild(createCell('', 'label'));
+  cols.forEach(col => grid.appendChild(createCell(col, 'label')));
+
+  // Grid
+  rows.forEach(row => {
+    grid.appendChild(createCell(row, 'label'));
+    cols.forEach(col => {
+      const coord = `${col}${row}`;
+      const roomClass = coordToRoomClass[coord] || '';
+      const isDoor = doorCoords.some(door => {
+        const [coord1, coord2] = door.split(',');
+        return coord === coord1 || coord === coord2;
+      });
+      grid.appendChild(createCell('', roomClass, isDoor));
+    });
+  });
+
+  function createCell(content, className = '', isDoor = false) {
+    const div = document.createElement('div');
+    div.className = `cell ${className}`.trim();
+    div.textContent = content;
+    if (isDoor) {
+      const door = document.createElement('div');
+      door.className = 'door-indicator';
+      div.appendChild(door);
+    }
+    return div;
+  }
+
+  function addConsoles(consoleCoords) {
+    consoleCoords.forEach(coord => {
+      const cellIndex = getCellIndexFromCoord(coord);
+      if (cellIndex !== -1) {
+        const cell = grid.children[cellIndex];
+        const consoleMarker = document.createElement('div');
+        consoleMarker.className = 'console-indicator';
+        cell.appendChild(consoleMarker);
+      }
+    });
+  }
+
+  function getCellIndexFromCoord(coord) {
+    const colLetter = coord[0];
+    const rowNumber = parseInt(coord.slice(1), 10);
+    const colIndex = cols.indexOf(colLetter);
+    const rowIndex = rowNumber - 1;
+    if (colIndex === -1 || rowIndex < 0 || rowIndex >= rows.length) return -1;
+    return (rowIndex + 1) * 27 + (colIndex + 1);
+  }
+
+  // Add consoles at I17, N9, V18
+  addConsoles(["I17", "N9", "V18"]);
+</script>
+
+</body>
+</html>

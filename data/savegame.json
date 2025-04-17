@@ -1,0 +1,26 @@
+{
+    "position": [
+        "I",
+        5
+    ],
+    "inventory": [],
+    "room_items": {
+        "Bridge": [],
+        "Server Room": [],
+        "Weapons Room": [],
+        "Engine Room": [],
+        "Airlock": [],
+        "Corridor": [],
+        "Cargo Bay": [],
+        "Sleeping Quarters 1": [],
+        "Sleeping Quarters 2": [],
+        "Sleeping Quarters 3": [],
+        "Sleeping Quarters 4": [],
+        "Chow Hall": [],
+        "Med Bay": [],
+        "Secret Passage 1": [],
+        "Secret Passage 2": [],
+        "Secret Passage 3": []
+    },
+    "magic_storage": {}
+}

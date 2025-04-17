@@ -1,0 +1,28 @@
+{
+  "riddles": [
+    {
+      "type": "riddle",
+      "question": "I speak without a mouth and hear without ears. What am I?",
+      "answers": ["echo", "an echo"]
+    },
+    {
+      "type": "riddle",
+      "question": "What has keys but can't open locks?",
+      "answers": ["piano", "a piano", "keyboard"]
+    }
+  ],
+  "logic": [
+    {
+      "type": "logic",
+      "question": "The code to the door is the number of sides on two triangles plus a square.",
+      "answer": "10"
+    }
+  ],
+  "cipher": [
+    {
+      "type": "cipher",
+      "question": "Decrypt this: Uifsf jt b tfdsfu npoub jo uif tubst. What does it say?",
+      "answer": "there is a secret manta in the stars"
+    }
+  ]
+}

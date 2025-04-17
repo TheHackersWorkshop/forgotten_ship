@@ -1,0 +1,110 @@
+{
+    "item_positions": {
+        "Secret Passage 2": {
+            "Bridge Key": [
+                "M",
+                21
+            ]
+        },
+        "Secret Passage 1": {
+            "Server Key": [
+                "O",
+                19
+            ],
+            "Weapons Key": [
+                "H",
+                5
+            ],
+            "Repair Tools": [
+                "O",
+                19
+            ]
+        },
+        "Sleeping Quarters 1": {
+            "Toolkit": [
+                "D",
+                11
+            ]
+        },
+        "Airlock": {
+            "Airlock Key": [
+                "I",
+                3
+            ],
+            "Room 4 Key": [
+                "I",
+                4
+            ]
+        },
+        "Cargo Bay": {
+            "Room 1 Key": [
+                "K",
+                5
+            ]
+        },
+        "Sleeping Quarters 4": {
+            "Room 2 Key": [
+                "M",
+                14
+            ]
+        },
+        "Sleeping Quarters 3": {
+            "Room 3 Key": [
+                "E",
+                13
+            ],
+            "Knife": [
+                "C",
+                14
+            ],
+            "Alcohol": [
+                "D",
+                14
+            ]
+        },
+        "Bridge": {
+            "Flashlight": [
+                "I",
+                19
+            ]
+        },
+        "Sleeping Quarters 2": {
+            "Ammo": [
+                "M",
+                11
+            ]
+        },
+        "Corridor": {
+            "Plaster": [
+                "I",
+                16
+            ],
+            "Painkillers": [
+                "S",
+                17
+            ]
+        },
+        "Chow Hall": {
+            "Medkit": [
+                "U",
+                16
+            ],
+            "Food": [
+                "V",
+                16
+            ],
+            "Navigator Rachel": [
+                "U",
+                16
+            ]
+        },
+        "Med Bay": {
+            "Escape Pod": [
+                "S",
+                14
+            ]
+        }
+    },
+    "visited_coords": [],
+    "completed_tasks": []
+}
