@@ -1,0 +1,26 @@
+[
+  {
+    "id": "player",
+    "name": "Ryan",
+    "type": "player",
+    "start_pos": ["N", 6],
+    "description": "Ryan wakes up on the cargo bay of a dark ship. He looks at himself and realizes he was-is a captain..",
+    "constant": true
+  },
+  {
+    "id": "flashlight",
+    "name": "Flashlight",
+    "type": "tool",
+    "position": ["N", 7],
+    "description": "A flashlight to see farther in dark areas.",
+    "constant": true
+  },
+  {
+    "id": "rachel",
+    "name": "Rachel",
+    "type": "npc",
+    "position": ["P", 14],
+    "description": "A crewmate you need to rescue.",
+    "constant": true
+  }
+]

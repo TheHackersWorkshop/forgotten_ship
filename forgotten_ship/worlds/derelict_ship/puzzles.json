@@ -1,0 +1,35 @@
+ 
+[
+  {
+    "id": "restore_power",
+    "room": "Engine Room",
+    "type": "multi_step",
+    "description": "Restore auxiliary power by entering each switch color in order.",
+    "steps": ["red", "blue", "green"],
+    "attempts": 3,
+    "success_text": "Auxiliary power restored.",
+    "failure_text": "The sequence failed. The panel resets.",
+    "solved": false,
+    "reward": "engine_key",
+    "reveal": { "room": "Engine Room", "passage": "to bridge" }
+  },
+  {
+    "id": "rush_test",
+    "room": "Engine Room",
+    "type": "timed_sequence",
+    "description": "Rush challenge: complete the two-step sequence quickly.",
+    "steps": ["left", "right"],
+    "time_limit": 5,
+    "success_text": "You completed the rush sequence.",
+    "failure_text": "You were too slow or made a mistake.",
+    "solved": false
+  },
+  {
+    "id": "unlock_bridge",
+    "room": "Bridge",
+    "type": "key_required",
+    "key": "bridge_key",
+    "description": "The door requires bridge access.",
+    "solved": false
+  }
+]

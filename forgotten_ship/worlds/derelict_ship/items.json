@@ -1,0 +1,69 @@
+[
+  {
+    "id": "player",
+    "name": "Ryan",
+    "type": "player",
+    "start_pos": ["N", 6],
+    "description": "Ryan wakes up on the cargo bay of a dark ship. He looks at himself and realizes he was-is a captain..",
+    "constant": true
+  },
+  {
+    "id": "flashlight",
+    "name": "Flashlight",
+    "type": "tool",
+    "position": ["N", 7],
+    "description": "A flashlight to see farther in dark areas.",
+    "constant": true
+  },
+  {
+    "id": "rachel",
+    "name": "Rachel",
+    "type": "npc",
+    "position": ["P", 14],
+    "description": "A crewmate you need to rescue.",
+    "constant": true
+  },
+
+  {
+    "id": "bridge_key",
+    "name": "Bridge Key",
+    "type": "key",
+    "opens": "Bridge",
+    "description": "A heavy key marked BRIDGE.",
+    "constant": false
+  },
+  {
+    "id": "engine_key",
+    "name": "Engine Key",
+    "type": "key",
+    "opens": "Engine Room",
+    "description": "Grease-stained and warm to the touch.",
+    "constant": false
+  },
+  {
+    "id": "medkit",
+    "name": "Medkit",
+    "type": "consumable",
+    "heal": 25,
+    "stackable": true,
+    "description": "Restores 25 health.",
+    "constant": false
+  },
+  {
+    "id": "cargo_rack_1",
+    "name": "Cargo Rack 1",
+    "type": "storage",
+    "position": ["J", 5],
+    "contents": [],
+    "description": "A storage rack for offloading items.",
+    "constant": true
+  },
+  {
+    "id": "shock_baton",
+    "name": "Shock Baton",
+    "type": "weapon",
+    "damage": 6,
+    "description": "Low-power defensive weapon.",
+    "constant": false
+  }
+]

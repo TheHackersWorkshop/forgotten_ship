@@ -1,0 +1,136 @@
+
+
+{
+  "ryan": {
+    "cargo_bay": [
+      {
+        "line": "Where am I? This place looks like it’s been abandoned for years.",
+        "type": "thought",
+        "trigger": "ryan_cargo_bay_first_entry",
+        "priority": 1,
+        "repeatable": false
+      },
+      {
+        "line": "I feel like I’ve been here before.",
+        "type": "thought",
+        "trigger": "ryan_cargo_bay_fallback",
+        "priority": 99,
+        "repeatable": true
+      }
+    ],
+    "engine_room": [
+      {
+        "line": "This has to be the source of the power failure.",
+        "type": "thought",
+        "trigger": "ryan_engine_room_power_check",
+        "priority": 2,
+        "repeatable": false
+      },
+      {
+        "line": "That hum... it’s unsettling.",
+        "type": "thought",
+        "trigger": "ryan_engine_room_fallback",
+        "priority": 99,
+        "repeatable": true
+      }
+    ],
+    "medbay": [
+      {
+        "line": "Someone was here recently... supplies are missing.",
+        "type": "thought",
+        "trigger": "ryan_medbay_scavenged",
+        "priority": 3,
+        "repeatable": false
+      },
+      {
+        "line": "Just the smell of old antiseptic and silence.",
+        "type": "thought",
+        "trigger": "ryan_medbay_fallback",
+        "priority": 99,
+        "repeatable": true
+      }
+    ],
+    "bridge": [
+      {
+        "line": "The ship's logs might be retrievable from here.",
+        "type": "thought",
+        "trigger": "ryan_bridge_logs_accessed",
+        "priority": 4,
+        "repeatable": false
+      },
+      {
+        "line": "The captain’s chair is empty. Was it ever occupied?",
+        "type": "thought",
+        "trigger": "ryan_bridge_fallback",
+        "priority": 99,
+        "repeatable": true
+      }
+    ]
+  },
+  "rachel": {
+    "cargo_bay": [
+      {
+        "line": "Structural integrity is at 43%. This bay won’t last much longer without repairs.",
+        "type": "log",
+        "trigger": "rachel_cargo_bay_scan",
+        "priority": 1,
+        "repeatable": false
+      },
+      {
+        "line": "Sensors show minimal movement in this section.",
+        "type": "log",
+        "trigger": "rachel_cargo_bay_fallback",
+        "priority": 99,
+        "repeatable": true
+      }
+    ],
+    "engine_room": [
+      {
+        "line": "Engine output is below critical threshold. Manual override required.",
+        "type": "log",
+        "trigger": "rachel_engine_room_low_power",
+        "priority": 2,
+        "repeatable": false
+      },
+      {
+        "line": "Temperature anomaly detected. Proceed with caution.",
+        "type": "log",
+        "trigger": "rachel_engine_room_fallback",
+        "priority": 99,
+        "repeatable": true
+      }
+    ],
+    "medbay": [
+      {
+        "line": "Medical inventory depleted. No bio-signs detected.",
+        "type": "log",
+        "trigger": "rachel_medbay_empty",
+        "priority": 3,
+        "repeatable": false
+      },
+      {
+        "line": "Medbay offline. Backup power unavailable.",
+        "type": "log",
+        "trigger": "rachel_medbay_fallback",
+        "priority": 99,
+        "repeatable": true
+      }
+    ],
+    "bridge": [
+      {
+        "line": "Bridge systems partially responsive. Main console locked.",
+        "type": "log",
+        "trigger": "rachel_bridge_systems_nominal",
+        "priority": 4,
+        "repeatable": false
+      },
+      {
+        "line": "External communications offline. Unable to reach command.",
+        "type": "log",
+        "trigger": "rachel_bridge_fallback",
+        "priority": 99,
+        "repeatable": true
+      }
+    ]
+  }
+}
