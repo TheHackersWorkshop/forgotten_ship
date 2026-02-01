@@ -29,11 +29,11 @@ Players can “look” around based on visibility and scan adjacent tiles for it
 This setup is already built to support more complex features such as puzzles, enemies, or branching narrative — but right now the focus is entirely on the interactive structure.
 
 ⚙️ Current Status
-Incomplete — The narrative, dialogue, and puzzle elements are not yet finalized.
+New version — The narrative, dialogue, and puzzle elements are not yet finalized.
 
 Playable — The game can be run, explored, and interacted with via the terminal.
 
-Expandable — Room data and item catalogs are structured in a way that supports content growth.
+Expandable — Room data and item catalogs are structured in a way that supports content growth through json files.
 
 You can:
 
@@ -43,11 +43,9 @@ Pick up and use items
 
 Move between rooms (using doors when available)
 
-Save/load your progress
-
 Interact with room descriptions and inventory limits
 
-You cannot yet:
+Not yet done:
 
 Complete a storyline
 
