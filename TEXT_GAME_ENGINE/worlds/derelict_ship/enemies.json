@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Scuttler",
+    "health": 10,
+    "attack_power": 4,
+    "enemy_type": "scuttler",
+    "location": ["G", 10],
+    "path": [["G",10],["H",10],["I",10]]
+  },
+  {
+    "name": "Lurker",
+    "health": 25,
+    "attack_power": 12,
+    "enemy_type": "lurker",
+    "location": ["I", 18],
+    "agro_range": 3
+  },
+  {
+    "name": "The Stalker",
+    "health": 60,
+    "attack_power": 18,
+    "enemy_type": "stalker",
+    "location": ["N", 19],
+    "agro_range": 4
+  },
+  { "name": "Dust Mite", "health": 5, "attack_power": 2, "enemy_type": "swarmer" },
+  { "name": "Dust Mite", "health": 5, "attack_power": 2, "enemy_type": "swarmer" },
+  { "name": "Dust Mite", "health": 5, "attack_power": 2, "enemy_type": "swarmer" },
+  { "name": "Warp Tick", "health": 8, "attack_power": 5, "enemy_type": "swarmer" },
+  { "name": "Warp Tick", "health": 8, "attack_power": 5, "enemy_type": "swarmer" },
+  { "name": "Failed Experiment", "health": 15, "attack_power": 7, "enemy_type": "humanoid" },
+  { "name": "Failed Experiment", "health": 15, "attack_power": 7, "enemy_type": "humanoid" },
+  { "name": "Rusty Maintenance Drone", "health": 20, "attack_power": 6, "enemy_type": "robotic" },
+  { "name": "Rusty Maintenance Drone", "health": 20, "attack_power": 6, "enemy_type": "robotic" },
+  { "name": "Security Bot v1", "health": 30, "attack_power": 10, "enemy_type": "robotic", "agro_range": 2 },
+  { "name": "Security Bot v1", "health": 30, "attack_power": 10, "enemy_type": "robotic", "agro_range": 2 },
+  { "name": "Void Parasite", "health": 12, "attack_power": 14, "enemy_type": "lurker" },
+  { "name": "Void Parasite", "health": 12, "attack_power": 14, "enemy_type": "lurker" },
+  { "name": "Hull Leech", "health": 18, "attack_power": 8, "enemy_type": "scuttler" },
+  { "name": "Infected Crewman", "health": 35, "attack_power": 12, "enemy_type": "humanoid" },
+  { "name": "Infected Crewman", "health": 35, "attack_power": 12, "enemy_type": "humanoid" },
+  { "name": "Plasma Wisp", "health": 22, "attack_power": 15, "enemy_type": "energy" },
+  { "name": "Shadow Creeper", "health": 28, "attack_power": 13, "enemy_type": "lurker", "agro_range": 3 },
+  { "name": "Heavy Loader Mech", "health": 50, "attack_power": 16, "enemy_type": "robotic" },
+  { "name": "Bio-Horror", "health": 55, "attack_power": 20, "enemy_type": "elite", "agro_range": 3 },
+  { "name": "Screamer", "health": 20, "attack_power": 25, "enemy_type": "glass_cannon" },
+  { "name": "Cryo-Ghoul", "health": 40, "attack_power": 14, "enemy_type": "undead" },
+  { "name": "Dreadnought Drone", "health": 75, "attack_power": 22, "enemy_type": "elite", "agro_range": 5 },
+  { "name": "The Captain's Ghost", "health": 90, "attack_power": 25, "enemy_type": "boss", "location": ["Z", 25] },
+  { "name": "Nerve-Gas Cloud", "health": 15, "attack_power": 30, "enemy_type": "hazard" }
+]

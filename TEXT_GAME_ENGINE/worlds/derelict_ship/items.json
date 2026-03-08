@@ -1,0 +1,116 @@
+[
+  {
+    "id": "plasma_cutter",
+    "name": "Plasma Cutter",
+    "type": "weapon",
+    "damage": 12,
+    "description": "Industrial tool repurposed for defense. High heat output.",
+    "constant": false
+  },
+  {
+    "id": "stim_shot",
+    "name": "Stim Shot",
+    "type": "consumable",
+    "heal": 50,
+    "stackable": true,
+    "description": "High-grade adrenaline. Restores 50 health instantly.",
+    "constant": false
+  },
+  {
+    "id": "datapad_logs",
+    "name": "Encrypted Datapad",
+    "type": "lore",
+    "description": "Contains logs from the Chief Engineer. It mentions a 'breach' in Section G.",
+    "constant": false
+  },
+  {
+    "id": "emp_grenade",
+    "name": "EMP Grenade",
+    "type": "consumable",
+    "damage": 40,
+    "target_type": "robotic",
+    "description": "Devastating against mechanical enemies. One-time use.",
+    "constant": false
+  },
+  {
+    "id": "scrap_metal",
+    "name": "Scrap Metal",
+    "type": "material",
+    "description": "Jagged pieces of the hull. Might be useful for repairs.",
+    "constant": false
+  },
+  {
+    "id": "protein_bar",
+    "name": "Stale Protein Bar",
+    "type": "consumable",
+    "heal": 10,
+    "description": "Hard as a rock, but it's better than nothing.",
+    "constant": false
+  },
+  {
+    "id": "security_badge",
+    "name": "Level 1 Badge",
+    "type": "key",
+    "opens": "Armory",
+    "description": "A plastic card with a faded photo of a security guard.",
+    "constant": false
+  },
+  {
+    "id": "fusion_core",
+    "name": "Fusion Core",
+    "type": "utility",
+    "description": "A heavy, glowing cylinder needed to power the auxiliary systems.",
+    "constant": false
+  },
+  {
+    "id": "bio_scanner",
+    "name": "Bio-Scanner",
+    "type": "tool",
+    "description": "Detects organic lifeforms through walls. Useful for spotting Scuttlers.",
+    "constant": true
+  },
+  {
+    "id": "emergency_flare",
+    "name": "Flare",
+    "type": "consumable",
+    "description": "Brightens a room significantly for a few turns.",
+    "constant": false
+  },
+  {
+    "id": "void_suit_patch",
+    "name": "Suit Patch Kit",
+    "type": "consumable",
+    "heal": 15,
+    "description": "Quickly seals minor punctures in your suit.",
+    "constant": false
+  },
+  {
+    "id": "heavy_wrench",
+    "name": "Heavy Wrench",
+    "type": "weapon",
+    "damage": 8,
+    "description": "A solid hunk of steel. Good for smashing things.",
+    "constant": false
+  },
+  {
+    "id": "oxygen_tank",
+    "name": "O2 Tank",
+    "type": "consumable",
+    "description": "Essential if the life support systems are offline.",
+    "constant": false
+  },
+  {
+    "id": "circuit_board",
+    "name": "Fried Circuitry",
+    "type": "material",
+    "description": "Burnt out, but some components might still work.",
+    "constant": false
+  },
+  {
+    "id": "captain_log",
+    "name": "Captain's Log",
+    "type": "lore",
+    "description": "The final entry: 'The shadows are moving. We are not alone.'",
+    "constant": true
+  }
+]
